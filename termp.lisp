@@ -9,3 +9,11 @@
            (boundp '*termp*))
       *termp*
       (setf *termp* (not (equalp "dumb" (uiop:getenv "TERM"))))))
+
+(defun quit (&optional (status 0))
+  "If we are in a real terminal, really quit. Otherwise, don't."
+  (cond
+    ((termp)
+     (uiop:quit status))
+    (t
+     (log:info "termp: not on a terminal, not quitting with status ~a.~&" status))))
