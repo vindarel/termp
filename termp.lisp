@@ -1,4 +1,11 @@
 
+(defpackage :termp
+  (:use :cl)
+  (:export :termp
+           :quit))
+
+(in-package :termp)
+
 ;; Are we running inside a real terminal window? Unbound by default.
 (defvar *termp*)
 
