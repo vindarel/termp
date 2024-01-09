@@ -22,4 +22,11 @@ There is also `termp:quit &optional code`: quit the Lisp image (`uiop:quit`) onl
 
 ---
 
+
+## Installation
+
+This library is on [Ultralisp](https://ultralisp.org/github).
+
+## Licence
+
 WTFPL
