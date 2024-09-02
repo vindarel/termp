@@ -4,6 +4,7 @@
   :version "0.1"
   :author "vindarel"
   :license "MIT"
+  :depends-on (:log4cl)
   :components ((:file "termp"))
 
   :description "Check if we are in a dumb or real terminal. Provide the termp check and a quit function."
