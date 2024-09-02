@@ -17,10 +17,12 @@
       *termp*
       (setf *termp* (not (equalp "dumb" (uiop:getenv "TERM"))))))
 
-(defun quit (&optional (status 0))
-  "If we are in a real terminal, really quit. Otherwise, don't."
+(defun quit (&optional (status 0) message)
+  "If we are in a real terminal, really quit. Otherwise, error out."
   (cond
     ((termp)
+     (when message
+       (format t "~a~&" message))
      (uiop:quit status))
     (t
-     (log:info "termp: not on a terminal, not quitting with status ~a.~&" status))))
+     (error (or message "termp: not on a terminal, not quitting.~&")))))
