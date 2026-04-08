@@ -25,7 +25,9 @@ There is also `termp:quit &optional code`: quit the Lisp image (`uiop:quit`) onl
 
 ## Installation
 
-This library is on [Ultralisp](https://ultralisp.org/github).
+This library is on [Ultralisp](https://ultralisp.org/github)
+
+and on Quicklisp (since 2026-01).
 
 ## Licence
 
